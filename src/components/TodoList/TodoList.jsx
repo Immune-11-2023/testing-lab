@@ -33,8 +33,8 @@ const TodoList = () => {
       </form>
       <Flex>
         <List>
-          {tasks.map((task) => {
-            return <ListItem>{task}</ListItem>
+          {tasks.map((task, index) => {
+            return <ListItem key={`task-${index}`}>{task}</ListItem>
           })}
         </List>
       </Flex>
